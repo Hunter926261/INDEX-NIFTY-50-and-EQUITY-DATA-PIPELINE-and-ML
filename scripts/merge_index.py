@@ -99,6 +99,28 @@ def main():
     if all_data:
         final_df = pd.concat(all_data, ignore_index=True)
 
+        # -------------------------------
+        # Important columns
+        # -------------------------------
+
+        required_columns = [
+        "Index Name",
+        "Open Index Value",
+        "High Index Value",
+        "Low Index Value",
+        "Closing Index Value",
+        "Points Change",
+        "Change(%)",
+        "Volume",
+        "Turnover (Rs. Cr.)",
+        "P/E",
+        "P/B",
+        "Div Yield",
+        "trade_date"
+        ]
+
+        final_df = final_df[required_columns]
+
         # Clean column names for output
         final_df.columns = [
             col.lower().strip().replace(" ", "_")

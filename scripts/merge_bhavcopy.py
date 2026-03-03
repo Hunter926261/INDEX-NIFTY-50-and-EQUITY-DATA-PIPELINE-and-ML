@@ -143,7 +143,6 @@ def main():
                 "tottrdval",
                 "totaltrades",
                 "isin",
-                "timestamp",
                 "trade_date",
             ]
 
